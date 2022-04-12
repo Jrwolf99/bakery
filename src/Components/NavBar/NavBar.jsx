@@ -5,8 +5,7 @@ import NavButton from './NavButton/NavButton';
 import Cooker from '../../assets/images/Cooker.svg'
 
 const StyledNav = styled.div`
-padding: 1em;
-background-color: #0000ff36;
+padding: 2.2em 3em;
 display: flex;
 align-items: center;
 `;
@@ -33,7 +32,7 @@ export default function NavBar() {
             <StyledWrapper>
                 <NavButton to="/">Home</NavButton>
                 <NavButton to="/about">About</NavButton>
-                <NavButton to="/rewards">Rewards</NavButton>
+                <NavButton to="/menu">Menu</NavButton>
                 <NavButton to="/contact">Contact</NavButton>
                 <NavButton to="/oven">
                     <StyledIcon src={Cooker} alt="cooker icon" />

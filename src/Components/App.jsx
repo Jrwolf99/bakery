@@ -9,6 +9,7 @@ import NavBar from "./NavBar/NavBar";
 
 
 const StyledApp = styled.div`
+color: #4C1515;
 `;
 
 
@@ -16,8 +17,8 @@ const StyledApp = styled.div`
 export default function App() {
   return (
     <StyledApp>
+      <NavBar />
       <Switch>
-        <NavBar />
         <Route path="/menu">
           <Menu />
         </Route>
