@@ -8,6 +8,7 @@ const StyledNav = styled.div`
 padding: 2.2em 3em;
 display: flex;
 align-items: center;
+
 `;
 const StyledHeadline = styled.h1`
 margin-right: auto;
@@ -21,6 +22,9 @@ align-items: center;
 const StyledIcon = styled.img`
 width: 30px;
 height: 30px;
+
+
+
 `;
 
 
