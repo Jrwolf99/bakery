@@ -33,7 +33,7 @@ const StyledBlur = styled.div`
 
 const StyledImage = styled.img`
     position: absolute;
-    height: 150%;
+    height: 120%;
     top: 60%;
     left: 50%;
     z-index: 1;
