@@ -116,7 +116,7 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-gap: 40px;
+gap: 90px;
 
 &>div {
     text-align: center;
@@ -139,12 +139,7 @@ gap: 20px;
 }
 
 @media (max-width: 900px) {
-    
     flex-direction: row;
-
-
-
-
 }
 
 `;
