@@ -6,7 +6,14 @@ import CakePop from "../../assets/images/CakePop.png"
 import CoffeeCake from "../../assets/images/CoffeeCake.png"
 import IceCream from "../../assets/images/IceCream.png"
 import flamingobox from "../../assets/images/flamingobox.png"
+import facebookIcon from "../../assets/images/icons/Facebook.svg"
+import instagramIcon from "../../assets/images/icons/Instagram.svg"
+import twitterIcon from "../../assets/images/icons/Twitter.svg"
 
+
+
+
+import FooterLines from "../../assets/images/FooterLines.svg"
 
 
 const StyledMenuPage = styled.div`
@@ -24,7 +31,7 @@ gap: 50px;
 `;
 
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -42,16 +49,12 @@ const StyledHeaderText = styled.div`
         @media (max-width: 900px) {
         font-size: 2rem;
         }
-
-
-
     }
     &>p {
         font-size: 1.2rem;
         @media (max-width: 900px) {
         font-size: .7rem;
         }
-
     }
 `;
 
@@ -59,6 +62,90 @@ const StyledHeaderText = styled.div`
 const StyledHeaderPic = styled.img`
     width: 500px;
     border: 1rem solid #f4f4f4;
+`;
+
+
+const StyledFooter = styled.footer`
+padding-bottom: 5em;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+
+
+`;
+
+
+
+const StyledLinesImg = styled.img`
+transform: scaleX(2.5);
+height: 35vh;
+padding: 5em 0;
+`;
+
+
+const StyledFooterContent = styled.div`
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+
+@media (max-width: 900px) {
+    
+    flex-direction: column;
+    gap: 50px;
+
+
+
+
+}
+
+`;
+
+
+const StyledAddressContent = styled.div`
+    text-align: center;
+`;
+
+
+const StyledLinkContent = styled.div`
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 40px;
+
+&>div {
+    text-align: center;
+    &>h2{
+        text-decoration: underline;
+    }
+}
+
+`;
+
+const StyledIcons = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+&>* {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 900px) {
+    
+    flex-direction: row;
+
+
+
+
+}
 
 `;
 
@@ -66,9 +153,6 @@ const StyledHeaderPic = styled.img`
 
 export default function Menu() {
     return (
-
-
-
         <StyledMenuPage>
             <StyledHeader>
                 <StyledHeaderText>
@@ -128,6 +212,41 @@ export default function Menu() {
                     color="#709B4E"
                 />
             </StyledMenuGrid>
+            <StyledFooter>
+                <StyledLinesImg src={FooterLines} />
+                <StyledFooterContent>
+                    <StyledAddressContent>
+                        <h1>Bakery Bakes</h1>
+                        <p>Slogan goes here<br /><br /></p>
+                        <p>123 Right Street, Memphis TN 38111</p>
+                        <p>email@email.com</p>
+                        <p>901-999-9999</p>
+                    </StyledAddressContent>
+                    <StyledLinkContent>
+                        <div>
+                            <h2>Shop</h2>
+                            <p>Menu</p>
+                        </div>
+                        <div>
+                            <h2>About</h2>
+                            <p>Events</p>
+                        </div>
+                        <div>
+                            <h2>Contact</h2>
+                            <p>Contact Form</p>
+                        </div>
+                    </StyledLinkContent>
+                    <StyledIcons>
+                        <img src={facebookIcon} alt="facebookIcon" />
+                        <img src={instagramIcon} alt="instagramIcon" />
+                        <img src={twitterIcon} alt="twitterIcon" />
+
+                    </StyledIcons>
+                </StyledFooterContent>
+
+            </StyledFooter>
+
+
         </StyledMenuPage>
     )
 }
