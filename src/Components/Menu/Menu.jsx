@@ -88,6 +88,7 @@ padding: 5em 0;
 
 const StyledFooterContent = styled.div`
 width: 100%;
+padding: 0 15vw;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
@@ -113,11 +114,12 @@ const StyledAddressContent = styled.div`
 const StyledLinkContent = styled.div`
 width: 50%;
 margin: auto;
-padding: 2em;
+padding: 0 5vw;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
+gap: 20px;
 &>div {
     text-align: center;
     &>h2{
