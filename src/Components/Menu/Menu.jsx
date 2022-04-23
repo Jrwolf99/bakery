@@ -111,18 +111,22 @@ const StyledAddressContent = styled.div`
 
 
 const StyledLinkContent = styled.div`
-
+width: 50%;
+margin: auto;
+padding: 2em;
 display: flex;
 flex-direction: row;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
-gap: 90px;
-
 &>div {
     text-align: center;
     &>h2{
         text-decoration: underline;
     }
+}
+@media (max-width: 900px) {
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 `;
