@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Cooker from '../../assets/images/Cooker.svg'
 import { Link } from 'react-router-dom';
+import { useResponsive } from '../../hooks/useResponsive';
 
 const StyledNav = styled.div`
 padding: 2.2em 3em;
@@ -12,16 +13,19 @@ align-items: center;
 `;
 const StyledHeadline = styled.h1`
 margin-right: auto;
+
+@media (max-width: 900px) {
+    
+    font-size: 1.5rem;
+
+}
+
 `;
 
-const StyledWrapper = styled.div`
+const StyledButtonBar = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-    @media (max-width: 900px) {
-        display: none;
-            }
-
 `;
 
 
@@ -49,11 +53,23 @@ color: #4C1515;
 `;
 
 
+const StyledHamLine = styled.div`
+    height: 2px;
+    width: 35px;
+    background-color: #4C1515;
+    margin: .5em 0;
+`;
+
+
 export default function NavBar() {
-    return (
+    const isMobile = useResponsive();
+
+
+
+    return !isMobile ? (
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
-            <StyledWrapper>
+            <StyledButtonBar>
                 <StyledNavButton to="/">Home</StyledNavButton>
                 <StyledNavButton to="/about">About</StyledNavButton>
                 <StyledNavButton to="/menu">Menu</StyledNavButton>
@@ -61,7 +77,18 @@ export default function NavBar() {
                 <StyledNavButton to="/oven">
                     <StyledIcon src={Cooker} alt="cooker icon" />
                 </StyledNavButton>
-            </StyledWrapper>
+            </StyledButtonBar>
+        </StyledNav>
+    ) : (
+        <StyledNav>
+            <StyledHeadline>Bakery Bakes</StyledHeadline>
+            <StyledButtonBar>
+                <Link to="/menu">
+                    <StyledHamLine></StyledHamLine>
+                    <StyledHamLine></StyledHamLine>
+                    <StyledHamLine></StyledHamLine>
+                </Link>
+            </StyledButtonBar>
         </StyledNav>
     )
 }
