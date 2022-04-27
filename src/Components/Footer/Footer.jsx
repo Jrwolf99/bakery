@@ -12,7 +12,9 @@ import FooterLines from "../../assets/images/FooterLines.svg"
 
 
 const StyledFooter = styled.footer`
-padding-bottom: 5em;
+width: 100%;
+margin-bottom: 10rem;
+padding: none;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -28,8 +30,7 @@ padding: 5em 0;
 
 
 const StyledFooterContent = styled.div`
-width: 100%;
-padding: 0 15vw;
+width: 80%;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;

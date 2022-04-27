@@ -19,7 +19,9 @@ export default function useMobile() {
         return () => window.removeEventListener("resize", updateSize);
     }, []);
 
-
+    useEffect(() => {
+        if (!isMobile) setIsNavClicked(false);
+    }, [isMobile, setIsNavClicked])
 
     useEffect(() => {
         (size[0] < 900) ? setIsMobile(true) : setIsMobile(false);
