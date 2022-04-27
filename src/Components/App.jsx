@@ -1,10 +1,12 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { Switch, Route } from "react-router-dom";
 
 import "../globalstyles/globalreset.css"
 import "../globalstyles/typography.css"
+import useToggle from "../hooks/useToggle";
 import Menu from "./Menu/Menu";
+import MobileNavScreen from "./MobileNavScreen/MobileNavScreen";
 import NavBar from "./NavBar/NavBar";
 
 
@@ -24,17 +26,21 @@ color: #4C1515;
 `;
 
 
-
 export default function App() {
+
+  const [isMobileClicked, toggleMobileClick] = useToggle();
   return (
-    <StyledApp>
-      <NavBar />
-      <Switch>
-        <Route path="/menu">
-          <Menu />
-        </Route>
-        <Route path="/contact"></Route>
-      </Switch>
-    </StyledApp>
+    <BrowserRouter>
+      <StyledApp>
+        <NavBar toggleMobileClick={toggleMobileClick} isMobileClicked={isMobileClicked} />
+        {isMobileClicked &&
+          <MobileNavScreen toggleMobileClick={toggleMobileClick} />}
+        {!isMobileClicked &&
+          <Routes>
+            <Route path="menu" element={<Menu />} />
+          </Routes>}
+      </StyledApp>
+
+    </BrowserRouter>
   );
 }

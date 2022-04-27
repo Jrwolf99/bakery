@@ -59,7 +59,7 @@ const StyledPrice = styled.p`
         color: ${props => props.color};
 
 `;
-const StyledButton = styled(Link)`
+const StyledButton = styled.button`
         text-align: center;
         padding: .5em 4em;
         margin: 2em;
