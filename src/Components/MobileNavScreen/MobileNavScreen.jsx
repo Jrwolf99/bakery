@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import Footer from '../Footer/Footer';
 import { StyledNavButton } from '../StyledComponents/buttons';
 
 const StyledNavScreen = styled.div`
@@ -18,15 +17,15 @@ const StyledNavList = styled.div`
 `;
 
 
-export default function MobileNavScreen({ toggleMobileClick }) {
+export default function MobileNavScreen({ toggleNavClick }) {
     return (
         <StyledNavScreen>
             <StyledNavList>
-                <StyledNavButton onClick={toggleMobileClick} to="/">Home</StyledNavButton>
-                <StyledNavButton onClick={toggleMobileClick} to="shop">Shop</StyledNavButton>
-                <StyledNavButton onClick={toggleMobileClick} to="about">About</StyledNavButton>
-                <StyledNavButton onClick={toggleMobileClick} to="menu">Menu</StyledNavButton>
-                <StyledNavButton onClick={toggleMobileClick} to="contact">Contact</StyledNavButton>
+                <StyledNavButton onClick={toggleNavClick} to="/">Home</StyledNavButton>
+                <StyledNavButton onClick={toggleNavClick} to="shop">Shop</StyledNavButton>
+                <StyledNavButton onClick={toggleNavClick} to="about">About</StyledNavButton>
+                <StyledNavButton onClick={toggleNavClick} to="menu">Menu</StyledNavButton>
+                <StyledNavButton onClick={toggleNavClick} to="contact">Contact</StyledNavButton>
             </StyledNavList>
 
         </StyledNavScreen>

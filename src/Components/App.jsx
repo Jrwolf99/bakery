@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
 import "../globalstyles/globalreset.css"
 import "../globalstyles/typography.css"
-import { useResponsive } from "../hooks/useResponsive";
-import useToggle from "../hooks/useToggle";
+import useMobile from "../hooks/useMobile";
 import Menu from "./Menu/Menu";
 import MobileNavScreen from "./MobileNavScreen/MobileNavScreen";
 import NavBar from "./NavBar/NavBar";
@@ -29,20 +28,18 @@ color: #4C1515;
 
 export default function App() {
 
-  const [isMobileClicked, toggleMobileClick] = useToggle();
-  const isMobile = useResponsive();
+  const { isMobile, isNavClicked, toggleNavClick } = useMobile();
   return (
     <BrowserRouter>
       <StyledApp>
-        <NavBar toggleMobileClick={toggleMobileClick} isMobileClicked={isMobileClicked} />
-        {isMobileClicked && isMobile &&
-          <MobileNavScreen toggleMobileClick={toggleMobileClick} />}
-        {!isMobileClicked &&
+        <NavBar toggleNavClick={toggleNavClick} isNavClicked={isNavClicked} isMobile={isMobile} />
+        {isNavClicked && isMobile &&
+          <MobileNavScreen toggleNavClick={toggleNavClick} />}
+        {!isNavClicked &&
           <Routes>
             <Route path="menu" element={<Menu />} />
           </Routes>}
       </StyledApp>
-
     </BrowserRouter>
   );
 }

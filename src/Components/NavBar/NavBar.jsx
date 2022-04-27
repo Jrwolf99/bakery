@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Cooker from '../../assets/images/Cooker.svg'
-import { Link } from 'react-router-dom';
-import { useResponsive } from '../../hooks/useResponsive';
-import useToggle from '../../hooks/useToggle';
 import { StyledIcon, StyledNavButton } from '../StyledComponents/buttons';
 
 const StyledNav = styled.div`
@@ -38,8 +35,8 @@ const StyledHamLine = styled.div`
 `;
 
 
-export default function NavBar({ toggleMobileClick, isMobileClicked }) {
-    const isMobile = useResponsive();
+export default function NavBar({ toggleNavClick, isNavClicked, isMobile }) {
+    console.log(isMobile)
     return !isMobile ? (
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
@@ -57,12 +54,12 @@ export default function NavBar({ toggleMobileClick, isMobileClicked }) {
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
             <StyledButtonBar>
-                {!isMobileClicked && <button onClick={toggleMobileClick}>
+                {!isNavClicked && <button onClick={toggleNavClick}>
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
                 </button>}
-                {isMobileClicked && <button onClick={toggleMobileClick}>close</button>}
+                {isNavClicked && <button onClick={toggleNavClick}>close</button>}
             </StyledButtonBar>
         </StyledNav>
     )
