@@ -8,16 +8,26 @@ width: 100vw;
 `;
 
 
+const StyledNavList = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+`;
+
+
 export default function MobileNavScreen({ toggleMobileClick }) {
     return (
         <StyledNavScreen>
-            <div>
-                <StyledNavButton to="/">Home</StyledNavButton>
-                <StyledNavButton to="shop">Shop</StyledNavButton>
-                <StyledNavButton to="about">About</StyledNavButton>
-                <StyledNavButton to="rewards">Rewards</StyledNavButton>
-                <StyledNavButton to="contact">Contact</StyledNavButton>
-            </div>
+            <StyledNavList>
+                <StyledNavButton onClick={toggleMobileClick} to="/">Home</StyledNavButton>
+                <StyledNavButton onClick={toggleMobileClick} to="shop">Shop</StyledNavButton>
+                <StyledNavButton onClick={toggleMobileClick} to="about">About</StyledNavButton>
+                <StyledNavButton onClick={toggleMobileClick} to="menu">Menu</StyledNavButton>
+                <StyledNavButton onClick={toggleMobileClick} to="contact">Contact</StyledNavButton>
+            </StyledNavList>
 
         </StyledNavScreen>
     )

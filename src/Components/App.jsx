@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import "../globalstyles/globalreset.css"
 import "../globalstyles/typography.css"
+import { useResponsive } from "../hooks/useResponsive";
 import useToggle from "../hooks/useToggle";
 import Menu from "./Menu/Menu";
 import MobileNavScreen from "./MobileNavScreen/MobileNavScreen";
@@ -29,11 +30,12 @@ color: #4C1515;
 export default function App() {
 
   const [isMobileClicked, toggleMobileClick] = useToggle();
+  const isMobile = useResponsive();
   return (
     <BrowserRouter>
       <StyledApp>
         <NavBar toggleMobileClick={toggleMobileClick} isMobileClicked={isMobileClicked} />
-        {isMobileClicked &&
+        {isMobileClicked && isMobile &&
           <MobileNavScreen toggleMobileClick={toggleMobileClick} />}
         {!isMobileClicked &&
           <Routes>
