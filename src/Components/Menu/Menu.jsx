@@ -7,6 +7,7 @@ import CoffeeCake from "../../assets/images/CoffeeCake.png"
 import IceCream from "../../assets/images/IceCream.png"
 import flamingobox from "../../assets/images/flamingobox.png"
 import Footer from '../Footer/Footer'
+import { StyledHeaderText } from '../StyledComponents/typography'
 
 
 
@@ -32,30 +33,14 @@ const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
     margin-bottom: 10vh;
-
-`;
-
-
-const StyledHeaderText = styled.div`
-    width: 500px;
-    &>h1 {
-        font-size: 4rem;
-        @media (max-width: 900px) {
-        font-size: 2rem;
-        padding: 1em 0;
-        }
+    &>* {
+        width:500px;
     }
-    &>p {
-        font-size: 1.2rem;
-        @media (max-width: 900px) {
-        font-size: 1rem;
-        }
-    }
+
 `;
 
 
 const StyledHeaderPic = styled.img`
-    width: 500px;
     border: 1rem solid #f4f4f4;
 `;
 
@@ -79,7 +64,6 @@ export default function Menu() {
                 <StyledHeaderPic src={flamingobox} />
             </StyledHeader>
             <StyledMenuGrid>
-
                 <MenuCard
                     title="Cake Pops"
                     picture={CakePop}
