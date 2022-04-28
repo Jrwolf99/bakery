@@ -24,7 +24,8 @@ align-items: center;
 
 const StyledLinesImg = styled.img`
 transform: scaleX(2.5);
-height: 35vh;
+height: 50vh;
+width: 100%;
 padding: 5em 0;
 `;
 

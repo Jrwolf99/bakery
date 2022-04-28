@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from "styled-components";
+import useMobile from "../../hooks/useMobile"
 import { StyledHeaderText } from '../StyledComponents/typography';
 import VerticalLines from "../../assets/images/VerticalLines.svg";
+
+
 
 import facebookIcon from "../../assets/images/icons/Facebook.svg"
 import instagramIcon from "../../assets/images/icons/Instagram.svg"
@@ -10,26 +13,38 @@ import Footer from '../Footer/Footer';
 
 
 const StyledContactPage = styled.div`
+    padding-inline: 5em;
     &>${StyledHeaderText} {
-        width: 650px;
-        margin: 0 10rem;
+        max-width: 650px;
         margin-top: 1rem;
         margin-bottom: 5rem;
+        @media (max-width: 900px) {
+            margin: 1rem;
+            margin-bottom: 4rem;
     }
     
+    }
+   
 `;
 
 const StyledFormBox = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+max-width: 1000px;
 background-color: #FFC5C4;
-margin-inline: 10rem ;
+margin-inline: auto ;
 margin-top: 2rem;
-margin-bottom: 8rem;
 border-radius: 30px;
 border: 1px solid #4C1515;
 position: relative;
+
+@media (max-width: 900px) {
+ flex-direction: column;
+ padding: 1em;
+margin-inline: 4rem ;
+
+}
 
 
 &::after{
@@ -59,9 +74,6 @@ position: relative;
 
 }
 
-
-
-
 &>* {
     display: flex;
     flex-direction: column;
@@ -69,7 +81,6 @@ position: relative;
     align-items: center;
     text-align: center;
 }
-
 `;
 
 const StyledFormInfo = styled.div`
@@ -92,6 +103,7 @@ height: 500px;
 
 const StyledContactForm = styled.form`
 flex: 2;
+width: 100%;
 display: flex;
 flex-direction: column;
 &>label{
@@ -133,42 +145,48 @@ flex-direction: column;
 
 
 export default function Contact() {
+
+    const { isMobile } = useMobile();
+
     return (
-        <StyledContactPage>
-            <StyledHeaderText>
-                <h1>Got Something On Your Mind?</h1>
-                <p>Drop us a message below and we’ll get back to you as soon as possible! Santa reference?</p>
-            </StyledHeaderText>
-            <StyledFormBox>
-                <StyledFormInfo>
-                    <p>Custom<br />Postage<br />Stamp<br /></p>
-                    <br />
-                    <p>Bakery Bakes</p>
-                    <br />
-                    <p>123 Right Street,<br />Memphis TN<br />38111</p>
-                    <br />
-                    <div>
-                        <img src={facebookIcon} alt="facebook icon" />
-                        <img src={instagramIcon} alt="instagram icon" />
-                        <img src={twitterIcon} alt="twitter icon" />
-                    </div>
+        <>
+            <StyledContactPage>
+                <StyledHeaderText>
+                    <h1>Got Something On Your Mind?</h1>
+                    <p>Drop us a message below and we’ll get back to you as soon as possible! Santa reference?</p>
+                </StyledHeaderText>
+                <StyledFormBox>
+                    <StyledFormInfo>
+                        <p>Custom<br />Postage<br />Stamp<br /></p>
+                        <br />
+                        <p>Bakery Bakes</p>
+                        <br />
+                        <p>123 Right Street,<br />Memphis TN<br />38111</p>
+                        <br />
+                        <div>
+                            <img src={facebookIcon} alt="facebook icon" />
+                            <img src={instagramIcon} alt="instagram icon" />
+                            <img src={twitterIcon} alt="twitter icon" />
+                        </div>
 
 
-                </StyledFormInfo>
+                    </StyledFormInfo>
 
-                <StyledVerticalLines src={VerticalLines} />
-                <StyledContactForm>
-                    <label>Name<input type="text" required /></label>
-                    <label>Phone Number<input type="tel" required /></label>
-                    <label>Email<input type="email" required /></label>
-                    <label>Message<textarea required /></label>
-                    <button>Send</button>
+                    {!isMobile && <StyledVerticalLines src={VerticalLines} />
+                    }<StyledContactForm>
+                        <label>Name<input type="text" required /></label>
+                        <label>Phone Number<input type="tel" required /></label>
+                        <label>Email<input type="email" required /></label>
+                        <label>Message<textarea required /></label>
+                        <button>Send</button>
 
 
 
-                </StyledContactForm>
-            </StyledFormBox>
+                    </StyledContactForm>
+                </StyledFormBox>
+            </StyledContactPage>
             <Footer />
-        </StyledContactPage>
+
+        </>
     )
 }
