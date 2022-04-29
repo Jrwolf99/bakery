@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from "styled-components";
-import NavBar from '../NavBar/NavBar';
 import { StyledNavButton } from '../StyledComponents/buttons';
 
 const StyledNavScreen = styled.div`
@@ -13,12 +12,11 @@ const StyledNavList = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
 `;
 
 
-export default function MobileNavScreen({ toggleNavClick, isNavClicked, isMobile }) {
+export default function MobileNavScreen({ toggleNavClick }) {
+
     return (
         <StyledNavScreen>
             <StyledNavList>
@@ -28,7 +26,6 @@ export default function MobileNavScreen({ toggleNavClick, isNavClicked, isMobile
                 <StyledNavButton onClick={toggleNavClick} to="/menu">Menu</StyledNavButton>
                 <StyledNavButton onClick={toggleNavClick} to="/contact">Contact</StyledNavButton>
             </StyledNavList>
-
         </StyledNavScreen>
     )
 }

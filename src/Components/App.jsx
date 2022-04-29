@@ -25,17 +25,28 @@ color: #4C1515;
 
 export default function App() {
 
-  const { isMobile } = useMobile();
+  const { isMobile, isNavClicked, toggleNavClick } = useMobile();
   return (
     <BrowserRouter>
       <StyledApp>
         <NavBar
-          isMobile={isMobile} />
-        <Routes>
-          <Route path="menu" element={<Menu />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="mobilenavscreen" element={<MobileNavScreen />} />
-        </Routes>
+          isMobile={isMobile}
+          isNavClicked={isNavClicked}
+          toggleNavClick={toggleNavClick}
+        />
+
+        {isNavClicked ?
+          <MobileNavScreen
+            toggleNavClick={toggleNavClick}
+          />
+          :
+          <Routes>
+            <Route path="/" element={<Menu />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="contact" element={<Contact />} />
+          </Routes>
+        }
+
       </StyledApp>
     </BrowserRouter>
   );

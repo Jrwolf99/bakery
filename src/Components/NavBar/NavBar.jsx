@@ -35,7 +35,7 @@ const StyledHamLine = styled.div`
     margin: .5em 0;
 `;
 
-export default function NavBar({ isMobile }) {
+export default function NavBar({ isMobile, isNavClicked, toggleNavClick }) {
     return !isMobile ? (
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
@@ -53,11 +53,11 @@ export default function NavBar({ isMobile }) {
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
             <StyledButtonBar>
-                <Link to="mobilenavscreen">
+                <button onClick={toggleNavClick}>
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
-                </Link>
+                </button>
             </StyledButtonBar>
         </StyledNav>
     )
