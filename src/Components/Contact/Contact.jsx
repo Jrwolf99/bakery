@@ -19,7 +19,7 @@ const StyledContactPage = styled.div`
         margin-top: 1rem;
         margin-bottom: 5rem;
         @media (max-width: 900px) {
-            margin: 1rem;
+            margin: 0;
             margin-bottom: 4rem;
     }
     
@@ -33,7 +33,7 @@ justify-content: center;
 align-items: center;
 max-width: 1000px;
 background-color: #FFC5C4;
-margin-inline: auto ;
+margin-inline: auto;
 margin-top: 2rem;
 border-radius: 30px;
 border: 1px solid #4C1515;
