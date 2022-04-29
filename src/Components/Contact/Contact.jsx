@@ -31,7 +31,7 @@ const StyledFormBox = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-max-width: 1000px;
+max-width: 1500px;
 background-color: #FFC5C4;
 margin-inline: auto ;
 margin-top: 2rem;
@@ -118,6 +118,7 @@ flex-direction: column;
         width: 100%;
         margin: auto;
         margin-top: .4em;
+        color: #4C1515;
 
         background-color: transparent;
         border: none;
