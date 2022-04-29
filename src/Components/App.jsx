@@ -34,17 +34,13 @@ export default function App() {
           toggleNavClick={toggleNavClick}
           isNavClicked={isNavClicked}
           isMobile={isMobile} />
-
-        {isNavClicked && isMobile &&
-          <MobileNavScreen toggleNavClick={toggleNavClick} />}
-
-        {!isNavClicked &&
-          <Routes>
-            <Route path="menu" element={<Menu />} />
-            <Route path="contact" element={<Contact />} />
-          </Routes>}
-
+        <Routes>
+          <Route path="menu" element={<Menu />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="mobilenavscreen" element={<MobileNavScreen />} />
+        </Routes>
       </StyledApp>
+
     </BrowserRouter>
   );
 }
