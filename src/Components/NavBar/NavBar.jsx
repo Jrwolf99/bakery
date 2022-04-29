@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 import Cooker from '../../assets/images/Cooker.svg'
@@ -34,7 +35,7 @@ const StyledHamLine = styled.div`
     margin: .5em 0;
 `;
 
-export default function NavBar({ toggleNavClick, isNavClicked, isMobile }) {
+export default function NavBar({ isMobile }) {
     return !isMobile ? (
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
@@ -52,11 +53,11 @@ export default function NavBar({ toggleNavClick, isNavClicked, isMobile }) {
         <StyledNav>
             <StyledHeadline>Bakery Bakes</StyledHeadline>
             <StyledButtonBar>
-                <StyledNavButton to="mobilenavscreen">
+                <Link to="mobilenavscreen">
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
                     <StyledHamLine></StyledHamLine>
-                </StyledNavButton>
+                </Link>
             </StyledButtonBar>
         </StyledNav>
     )
