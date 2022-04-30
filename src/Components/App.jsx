@@ -39,17 +39,21 @@ export default function App() {
           />
           :
           <Routes>
+
+
             <Route path="/" element={<Menu
               color2="#4C1515"
               isMobile={isMobile}
               toggleNavClick={toggleNavClick}
             />} />
+
+
+
             <Route path="/menu" element={<Menu
               color2="#4C1515"
               isMobile={isMobile}
               toggleNavClick={toggleNavClick}
             />} />
-
 
             <Route path="/contact" element={<Contact
               color2="#4C1515"

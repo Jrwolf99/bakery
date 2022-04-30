@@ -85,7 +85,7 @@ export default function MenuCard({ title, picture, desc, price, color, color2, t
             <StyledTitle color={color2}>{title}</StyledTitle>
             <StyledDesc color={color2}>{desc}</StyledDesc>
             <StyledPrice color={color2}>{price}</StyledPrice>
-            <StyledButton color={color2}>Add To Oven</StyledButton>
+            <StyledButton color={color}>Add To Oven</StyledButton>
         </StyledMenuCard>
     )
 }
