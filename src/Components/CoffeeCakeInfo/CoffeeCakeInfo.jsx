@@ -2,22 +2,30 @@ import React from 'react'
 import styled from 'styled-components';
 
 import CoffeeCake from "../../assets/images/CoffeeCake.png"
+import CoffeeCakeBackground from "../../assets/images/Backgrounds/CoffeeCakeBackground.svg"
 import NavBar from '../NavBar/NavBar';
 
 
 const StyledCoffeeCakeInfo = styled.div`
-max-width: 1000px;
 margin: auto;
-
 @media (max-width: 900px) {
-    display  :none ;
+    display:none ;
 }
+`;
 
-
+const StyledHeader = styled.header`
+background-color: white;
+background: url(${CoffeeCakeBackground});
+height: 100vh;
 `;
 
 
-const StyledHeader = styled.header`
+
+
+
+const StyledInfoText = styled.div`
+        max-width: 1000px;
+        margin: auto;
         display: grid;
         grid-template: "title title"
                         "pic desc";
@@ -66,26 +74,51 @@ export default function CoffeeCakeInfo({ color, color2, isMobile, toggleNavClick
 
 
         <>
-            <NavBar color2={color2}
-                isMobile={isMobile}
-                toggleNavClick={toggleNavClick} />
-
             <StyledCoffeeCakeInfo>
-                <StyledHeader color2={color2}>
-                    <h1>Coffee Cake</h1>
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit faucibus eget et felis arcu, lobortis. Id congue rhoncus convallis mauris.</p>
-                        <p>$5.00 Each</p>
-                        <StyledOvenButton color={color}>Add to Oven</StyledOvenButton>
-                        <p>*Ingredients at bottom of page*</p>
-                    </div>
-                    <img src={CoffeeCake} alt="coffee cake" />
+
+                <StyledHeader>
+                    <NavBar color2={color2}
+                        isMobile={isMobile}
+                        toggleNavClick={toggleNavClick} />
+
+                    <StyledInfoText color2={color2}>
+                        <h1>Coffee Cake</h1>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suscipit faucibus eget et felis arcu, lobortis. Id congue rhoncus convallis mauris.</p>
+                            <p>$5.00 Each</p>
+                            <StyledOvenButton color={color}>Add to Oven</StyledOvenButton>
+                            <p>*Ingredients at bottom of page*</p>
+                        </div>
+                        <img src={CoffeeCake} alt="coffee cake" />
+                    </StyledInfoText>
                 </StyledHeader>
 
 
 
 
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis incidunt necessitatibus aspernatur quos unde dolores delectus ab rem, deleniti tempore temporibus! Ratione facere voluptatem aliquid quia natus dolore tempora iure.</p>
+
+
             </StyledCoffeeCakeInfo>
+
+
+
+
         </>
     )
 }
