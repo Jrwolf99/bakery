@@ -13,6 +13,7 @@ align-items: center;
 `;
 const StyledHeadline = styled.h1`
 margin-right: auto;
+color: ${props => props.color2};
 
 @media (max-width: 900px) {
     font-size: 1.5rem;
@@ -24,6 +25,7 @@ const StyledButtonBar = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
+
 `;
 
 
@@ -35,17 +37,17 @@ const StyledHamLine = styled.div`
     margin: .5em 0;
 `;
 
-export default function NavBar({ isMobile, isNavClicked, toggleNavClick }) {
+export default function NavBar({ isMobile, toggleNavClick, color2, color }) {
     return !isMobile ? (
         <StyledNav>
-            <StyledHeadline>Bakery Bakes</StyledHeadline>
+            <StyledHeadline color2={color2}>Bakery Bakes</StyledHeadline>
             <StyledButtonBar>
-                <StyledNavButton to="/">Home</StyledNavButton>
-                <StyledNavButton to="about">About</StyledNavButton>
-                <StyledNavButton to="menu">Menu</StyledNavButton>
-                <StyledNavButton to="contact">Contact</StyledNavButton>
-                <StyledNavButton to="oven">
-                    <StyledIcon src={Cooker} alt="cooker icon" />
+                <StyledNavButton color2={color2} to="/">Home</StyledNavButton>
+                <StyledNavButton color2={color2} to="/about">About</StyledNavButton>
+                <StyledNavButton color2={color2} to="/menu">Menu</StyledNavButton>
+                <StyledNavButton color2={color2} to="/contact">Contact</StyledNavButton>
+                <StyledNavButton color2={color2} to="/oven">
+                    <StyledIcon color2={color2} src={Cooker} alt="cooker icon" />
                 </StyledNavButton>
             </StyledButtonBar>
         </StyledNav>

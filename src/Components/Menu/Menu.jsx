@@ -8,6 +8,7 @@ import IceCream from "../../assets/images/IceCream.png"
 import flamingobox from "../../assets/images/flamingobox.png"
 import Footer from '../Footer/Footer'
 import { StyledHeaderText } from '../StyledComponents/typography'
+import NavBar from '../NavBar/NavBar'
 
 
 
@@ -49,71 +50,92 @@ const StyledHeaderPic = styled.img`
 
 
 
-export default function Menu() {
+export default function Menu({ color2, isMobile, toggleNavClick }) {
     return (
-        <StyledMenuPage>
-            <StyledHeader>
-                <StyledHeaderText>
-                    <h1>Browse Our <br /> Selection.</h1>
-                    <p>Our baked goods are made using the best local
-                        ingredients we can find. Order today for 2
-                        to 5 day pick-up! If you want to make a pick-up
-                        outside that time window, hit that contact
-                        button in the top right of the page!</p>
-                </StyledHeaderText>
-                <StyledHeaderPic src={flamingobox} />
-            </StyledHeader>
-            <StyledMenuGrid>
-                <MenuCard
-                    title="Cake Pops"
-                    picture={CakePop}
-                    desc="A really really really really really tasty cake pop!"
-                    price="$5.00"
-                    color="#ED9298"
-                />
-
-                <MenuCard
-                    title="Coffee Cake"
-                    picture={CoffeeCake}
-                    desc="A really really really really really tasty coffee cake!"
-                    price="$5.00"
-                    color="#709B4E"
-                />
-
-                <MenuCard
-                    title="Ice Cream"
-                    picture={IceCream}
-                    desc="A really really really really really tasty ice cream!"
-                    price="$5.00"
-                    color="#4EB4D4"
-                />
-                <MenuCard
-                    title="Ice Cream"
-                    picture={IceCream}
-                    desc="A really really really really really tasty ice cream!"
-                    price="$5.00"
-                    color="#4EB4D4"
-                />
-                <MenuCard
-                    title="Cake Pops"
-                    picture={CakePop}
-                    desc="A really really really really really tasty cake pop!"
-                    price="$5.00"
-                    color="#ED9298"
-                />
-                <MenuCard
-                    title="Coffee Cake"
-                    picture={CoffeeCake}
-                    desc="A really really really really really tasty coffee cake!"
-                    price="$5.00"
-                    color="#709B4E"
-                />
-            </StyledMenuGrid>
-
-            <Footer />
 
 
+        <>
+            <NavBar color2={color2}
+                isMobile={isMobile}
+                toggleNavClick={toggleNavClick} />
 
-        </StyledMenuPage>
+
+            <StyledMenuPage>
+                <StyledHeader>
+                    <StyledHeaderText>
+                        <h1>Browse Our <br /> Selection.</h1>
+                        <p>Our baked goods are made using the best local
+                            ingredients we can find. Order today for 2
+                            to 5 day pick-up! If you want to make a pick-up
+                            outside that time window, hit that contact
+                            button in the top right of the page!</p>
+                    </StyledHeaderText>
+                    <StyledHeaderPic src={flamingobox} />
+                </StyledHeader>
+                <StyledMenuGrid>
+                    <MenuCard
+                        title="Cake Pops"
+                        picture={CakePop}
+                        desc="A really really really really really tasty cake pop!"
+                        price="$5.00"
+                        color="#ED9298"
+                        color2="#4C1515"
+                        to="cakepopinfo"
+                    />
+
+                    <MenuCard
+                        title="Coffee Cake"
+                        picture={CoffeeCake}
+                        desc="A really really really really really tasty coffee cake!"
+                        price="$5.00"
+                        color="#709B4E"
+                        color2="#162C05"
+                        to="coffeecakeinfo"
+                    />
+
+                    <MenuCard
+                        title="Ice Cream"
+                        picture={IceCream}
+                        desc="A really really really really really tasty ice cream!"
+                        price="$5.00"
+                        color="#4EB4D4"
+                        color2="#084356"
+                        to="icecreaminfo"
+                    />
+                    <MenuCard
+                        title="Ice Cream"
+                        picture={IceCream}
+                        desc="A really really really really really tasty ice cream!"
+                        price="$5.00"
+                        color="#4EB4D4"
+                        color2="#084356"
+                        to="icecreaminfo"
+                    />
+                    <MenuCard
+                        title="Cake Pops"
+                        picture={CakePop}
+                        desc="A really really really really really tasty cake pop!"
+                        price="$5.00"
+                        color="#ED9298"
+                        color2="#4C1515"
+                        to="cakepopinfo"
+                    />
+                    <MenuCard
+                        title="Coffee Cake"
+                        picture={CoffeeCake}
+                        desc="A really really really really really tasty coffee cake!"
+                        price="$5.00"
+                        color="#709B4E"
+                        color2="#162C05"
+                        to="coffeecakeinfo"
+                    />
+                </StyledMenuGrid>
+
+                <Footer />
+
+
+
+            </StyledMenuPage>
+        </>
     )
 }

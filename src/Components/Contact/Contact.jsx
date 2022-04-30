@@ -10,6 +10,7 @@ import facebookIcon from "../../assets/images/icons/Facebook.svg"
 import instagramIcon from "../../assets/images/icons/Instagram.svg"
 import twitterIcon from "../../assets/images/icons/Twitter.svg"
 import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 
 
 const StyledContactPage = styled.div`
@@ -143,12 +144,13 @@ flex-direction: column;
 
 
 
-export default function Contact() {
-
-    const { isMobile } = useMobile();
-
+export default function Contact({ color2, isMobile, toggleNavClick }) {
     return (
         <>
+            <NavBar color2={color2}
+                isMobile={isMobile}
+                toggleNavClick={toggleNavClick} />
+
             <StyledContactPage>
                 <StyledHeaderText>
                     <h1>Got Something On Your Mind?</h1>

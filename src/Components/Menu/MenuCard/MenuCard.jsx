@@ -71,17 +71,21 @@ const StyledButton = styled.button`
 
 
 
-export default function MenuCard({ title, picture, desc, price, color }) {
+export default function MenuCard({ title, picture, desc, price, color, color2, to }) {
     return (
         <StyledMenuCard>
+
             <StyledBackColor color={color}>
-                <StyledImage src={picture} alt={desc} />
-                <StyledBlur color={color} />
+                <Link to={to}>
+                    <StyledImage src={picture} alt={desc} />
+                    <StyledBlur color={color} />
+                </Link>
             </StyledBackColor>
-            <StyledTitle>{title}</StyledTitle>
-            <StyledDesc>{desc}</StyledDesc>
-            <StyledPrice>{price}</StyledPrice>
-            <StyledButton color={color}>Add To Oven</StyledButton>
+
+            <StyledTitle color={color2}>{title}</StyledTitle>
+            <StyledDesc color={color2}>{desc}</StyledDesc>
+            <StyledPrice color={color2}>{price}</StyledPrice>
+            <StyledButton color={color2}>Add To Oven</StyledButton>
         </StyledMenuCard>
     )
 }
