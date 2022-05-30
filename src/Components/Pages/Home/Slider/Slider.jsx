@@ -9,7 +9,7 @@ import icecreamHome from '../../../../assets/images/Backgrounds/icecreamHome.png
 const variants = {
     enter: (direction) => {
         return {
-            x: direction > 0 ? 2000 : -2000,
+            x: direction > 0 ? 2800 : -2800,
         };
     },
     center: {
@@ -17,7 +17,8 @@ const variants = {
     },
     exit: (direction) => {
         return {
-            x: direction < 0 ? 2000 : -2000,
+            x: direction < 0 ? 2800 : -2800,
+
         };
     }
 };
@@ -27,6 +28,7 @@ const variants = {
 const StyledSlider = styled.div`
 position: relative;
 height: 80vh;
+background-color: #000000;
 
 &>button {
     position: absolute;
@@ -98,7 +100,7 @@ export default function Slider({ themeArray, imageIndex, page, setPage, directio
     useEffect(() => {
         const interval = setInterval(() => {
             paginate(-1)
-        }, 2700);
+        }, 6000);
         return () => clearInterval(interval);
     }, [paginate]);
 
@@ -119,8 +121,9 @@ export default function Slider({ themeArray, imageIndex, page, setPage, directio
                     exit="exit"
                     custom={direction}
                     transition={{
-                        x: { type: "spring", stiffness: 300, damping: 30 },
-                        opacity: { duration: 0.2 }
+                        type: 'tween',
+                        ease: 'easeInOut',
+                        duration: 1.5,
                     }}>
                     <StyledPic color1={themeArray[imageIndex].color1} pic={img} alt="img" />
                 </motion.div>
