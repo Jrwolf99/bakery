@@ -9,6 +9,7 @@ import twitterIcon from "../../assets/images/icons/Twitter.svg"
 
 
 import FooterLines from "../../assets/images/FooterLines.svg"
+import { Link } from 'react-router-dom'
 
 
 const StyledFooter = styled.footer`
@@ -60,13 +61,13 @@ justify-content: space-between;
 gap: 20px;
 &>div {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     &>h2{
         text-decoration: underline;
     }
-    &>p{
-        font-size: 1rem;
-        margin: 1rem;
-    }
+   
+
 }
 @media (max-width: 1000px) {
     width: 100%;
@@ -107,7 +108,7 @@ export default function Footer() {
                 <StyledLinkContent>
                     <div>
                         <h2>Shop</h2>
-                        <p>Menu</p>
+                        <Link to="/menu">Menu</Link>
                     </div>
                     <div>
                         <h2>About</h2>
@@ -115,7 +116,8 @@ export default function Footer() {
                     </div>
                     <div>
                         <h2>Contact</h2>
-                        <p>Contact Form</p>
+                        <Link to="/contact">Contact Form</Link>
+                        <Link to="/find">Find Us</Link>
                     </div>
                 </StyledLinkContent>
                 <StyledIcons>

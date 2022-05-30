@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import useMobile from "../hooks/useMobile";
 
+import styled from "styled-components";
 import "../globalstyles/globalreset.css"
 import "../globalstyles/typography.css"
-import useMobile from "../hooks/useMobile";
-import CoffeeCakeInfo from "./CoffeeCakeInfo/CoffeeCakeInfo";
-import Contact from "./Contact/Contact";
-import Menu from "./Menu/Menu";
+
 import MobileNavScreen from "./MobileNavScreen/MobileNavScreen";
 import NavBar from "./NavBar/NavBar";
+
+import Home from "./Pages/Home/Home";
+import Menu from "./Pages/Menu/Menu";
+import Contact from "./Pages/Contact/Contact";
+import CoffeeCakeInfo from "./Pages/CoffeeCakeInfo/CoffeeCakeInfo";
+import About from "./Pages/About/About";
+import Find from "./Pages/Find/Find";
 
 
 const StyledApp = styled.div`
 color: #4C1515;
-@media (min-width: 1700px) {
-  padding:  0 10em;
-}
-@media (min-width: 1700px) {
-  padding:  0 10em;
-}
 
 `;
 
@@ -40,13 +39,20 @@ export default function App() {
           :
           <Routes>
 
-
-            <Route path="/" element={<Menu
-              color2="#4C1515"
+            <Route path="/" element={<Home
               isMobile={isMobile}
               toggleNavClick={toggleNavClick}
             />} />
 
+            <Route path="/about" element={<About
+              isMobile={isMobile}
+              toggleNavClick={toggleNavClick}
+            />} />
+
+            <Route path="/find" element={<Find
+              isMobile={isMobile}
+              toggleNavClick={toggleNavClick}
+            />} />
 
 
             <Route path="/menu" element={<Menu

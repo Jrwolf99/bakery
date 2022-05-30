@@ -1,16 +1,15 @@
 import React from 'react'
 import styled from "styled-components";
-import useMobile from "../../hooks/useMobile"
-import { StyledHeaderText } from '../StyledComponents/typography';
-import VerticalLines from "../../assets/images/VerticalLines.svg";
+import useMobile from '../../../hooks/useMobile';
+import { StyledHeaderText } from '../../StyledComponents/typography';
+import VerticalLines from "../../../assets/images/VerticalLines.svg";
 
 
-
-import facebookIcon from "../../assets/images/icons/Facebook.svg"
-import instagramIcon from "../../assets/images/icons/Instagram.svg"
-import twitterIcon from "../../assets/images/icons/Twitter.svg"
-import Footer from '../Footer/Footer';
-import NavBar from '../NavBar/NavBar';
+import facebookIcon from "../../../assets/images/icons/Facebook.svg"
+import instagramIcon from "../../../assets/images/icons/Instagram.svg"
+import twitterIcon from "../../../assets/images/icons/Twitter.svg"
+import Footer from '../../Footer/Footer';
+import NavBar from '../../NavBar/NavBar';
 
 
 const StyledContactPage = styled.div`
@@ -150,7 +149,6 @@ export default function Contact({ color2, isMobile, toggleNavClick }) {
             <NavBar color2={color2}
                 isMobile={isMobile}
                 toggleNavClick={toggleNavClick} />
-
             <StyledContactPage>
                 <StyledHeaderText>
                     <h1>Got Something On Your Mind?</h1>
@@ -180,9 +178,6 @@ export default function Contact({ color2, isMobile, toggleNavClick }) {
                         <label>Email<input type="email" required /></label>
                         <label>Message<textarea required /></label>
                         <button>Send</button>
-
-
-
                     </StyledContactForm>
                 </StyledFormBox>
             </StyledContactPage>

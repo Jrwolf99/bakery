@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 
-import CoffeeCake from "../../assets/images/CoffeeCake.png"
-import CoffeeCakeBackground from "../../assets/images/Backgrounds/CoffeeCakeBackground.svg"
-import NavBar from '../NavBar/NavBar';
-import bag from "../../assets/images/bag.png"
-import Footer from '../Footer/Footer';
+import CoffeeCake from "../../../assets/images/CoffeeCake.png"
+import CoffeeCakeBackground from "../../../assets/images/Backgrounds/CoffeeCakeBackground.svg"
+import NavBar from '../../NavBar/NavBar';
+import bag from "../../../assets/images/bag.png"
+import Footer from '../../Footer/Footer';
 import MenuCard from '../Menu/MenuCard/MenuCard';
 
-import CakePopImg from "../../assets/images/CakePop.png"
-import CoffeeCakeImg from "../../assets/images/CoffeeCake.png"
-import IceCreamImg from "../../assets/images/IceCream.png"
+import CakePopImg from "../../../assets/images/CakePop.png"
+import CoffeeCakeImg from "../../../assets/images/CoffeeCake.png"
+import IceCreamImg from "../../../assets/images/IceCream.png"
 
 
 const StyledCoffeeCakeInfo = styled.div`

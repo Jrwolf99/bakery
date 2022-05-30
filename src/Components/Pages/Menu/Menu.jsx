@@ -2,13 +2,13 @@ import React from 'react'
 import MenuCard from './MenuCard/MenuCard'
 import styled from 'styled-components'
 
-import CakePop from "../../assets/images/CakePop.png"
-import CoffeeCake from "../../assets/images/CoffeeCake.png"
-import IceCream from "../../assets/images/IceCream.png"
-import flamingobox from "../../assets/images/flamingobox.png"
-import Footer from '../Footer/Footer'
-import { StyledHeaderText } from '../StyledComponents/typography'
-import NavBar from '../NavBar/NavBar'
+import CakePop from "../../../assets/images/CakePop.png"
+import CoffeeCake from "../../../assets/images/CoffeeCake.png"
+import IceCream from "../../../assets/images/IceCream.png"
+import flamingobox from "../../../assets/images/flamingobox.png"
+import Footer from '../../Footer/Footer'
+import { StyledHeaderText } from '../../StyledComponents/typography'
+import NavBar from '../../NavBar/NavBar'
 
 
 

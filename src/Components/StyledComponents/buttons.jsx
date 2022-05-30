@@ -7,7 +7,6 @@ export const StyledIcon = styled.img`
 width: 30px;
 height: 30px;
 filter: brightness(0);
-
 `;
 
 export const StyledNavButton = styled(Link)`
@@ -26,3 +25,5 @@ color: ${props => props.color2};
     }
 }
 `;
+
+

@@ -78,8 +78,9 @@ select {
   font: inherit;
 }
 
-a {
+a, Link {
   text-decoration: none;
+  color: inherit;
 }
 
 /*
