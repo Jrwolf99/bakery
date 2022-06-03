@@ -3,6 +3,9 @@ import styled from "styled-components";
 
 import AboutLines from "../../../../assets/images/AboutLines.svg"
 
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 import Img from "../../../../assets/images/Img.png"
 import ImgGrpTwo from "../../../../assets/images/ImgGrpTwo.png"
 
@@ -102,6 +105,18 @@ transform: translateY(-100px);
 
 
 
+const ScrollVarients = {
+    hidden: {
+        opacity: 0,
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            duration: 0.8,
+            staggerChildren: 0.3,
+        },
+    },
+};
 
 
 
@@ -109,6 +124,10 @@ transform: translateY(-100px);
 
 
 export default function HoriScroll() {
+
+
+    const { ref, inView } = useInView();
+
     return (
         <StyledHoriScroll>
             <StyledOuterWrap>
@@ -119,7 +138,14 @@ export default function HoriScroll() {
                     <div>DATE</div>
                     <div>DATE</div>
                     <div>DATE</div>
-                    <div>DATE</div>
+                    <motion.div
+                        ref={ref}
+                        variants={ScrollVarients}
+                        animate={inView ? "visible" : "hidden"}
+
+
+
+                    >DATE</motion.div>
                 </StyledMidground>
 
                 <StyledForeground>
