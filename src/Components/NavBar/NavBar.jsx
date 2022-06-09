@@ -10,16 +10,16 @@ padding: 2.2em 3em;
 display: flex;
 align-items: center;
 
-
-
 `;
-const StyledHeadline = styled.h1`
-margin-right: auto;
-color: ${props => props.color2};
 
-@media (max-width: 900px) {
-    font-size: 1.5rem;
-}
+const StyledHeadline = styled(Link)`
+    font-size: 2rem;
+    margin-right: auto;
+    color: ${props => props.color2};
+
+    @media (max-width: 900px) {
+        font-size: 1.5rem;
+    }
 
 `;
 
@@ -42,7 +42,12 @@ const StyledHamLine = styled.div`
 export default function NavBar({ isMobile, toggleNavClick, color2, color }) {
     return !isMobile ? (
         <StyledNav>
-            <StyledHeadline color2={color2}>Bakery Bakes</StyledHeadline>
+
+
+            <StyledHeadline color2={color2} to="/">Bakery Bakes</StyledHeadline>
+
+
+
             <StyledButtonBar>
                 <StyledNavButton color2={color2} to="/">Home</StyledNavButton>
                 <StyledNavButton color2={color2} to="/about">About</StyledNavButton>
@@ -55,7 +60,7 @@ export default function NavBar({ isMobile, toggleNavClick, color2, color }) {
         </StyledNav>
     ) : (
         <StyledNav>
-            <StyledHeadline>Bakery Bakes</StyledHeadline>
+            <StyledHeadline color2={color2} to="/">Bakery Bakes</StyledHeadline>
             <StyledButtonBar>
                 <button onClick={toggleNavClick}>
                     <StyledHamLine></StyledHamLine>

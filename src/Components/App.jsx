@@ -76,6 +76,29 @@ export default function App() {
                 color="#709B4E"
                 color2="#162C05"
               />} />
+
+
+
+            <Route path="/menu/icecreaminfo"
+              element={<CoffeeCakeInfo
+                isMobile={isMobile}
+                toggleNavClick={toggleNavClick}
+                color="#709B4E"
+                color2="#162C05"
+              />} />
+
+            <Route path="/menu/cakepopinfo"
+              element={<CoffeeCakeInfo
+                isMobile={isMobile}
+                toggleNavClick={toggleNavClick}
+                color="#709B4E"
+                color2="#162C05"
+              />} />
+
+
+
+
+
           </Routes>
         }
 
